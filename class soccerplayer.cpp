@@ -1,10 +1,3 @@
-/******************************************************************************
-
-                              Online C++ Compiler.
-               Code, Compile, Run and Debug C++ program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
 
 #include <iostream>
 
@@ -21,8 +14,12 @@ class Soccerplayer{
         this->name=name;
         
     }
-    string GetName(){
-        cin>>name;
+     string GetName(){
+        cout<<"Name: ";
+        getline(cin, name, '\n');
+        cout<<endl;
+        
+        
         return name;
     }
     void SetOld(int old){
@@ -31,7 +28,9 @@ class Soccerplayer{
         
     }
     int GetOld(){
+        cout<<"Old: ";
         cin>>old;
+        cout<<endl;
        return old;
     }
     void SetTestimonial(int testimonial){
@@ -40,7 +39,9 @@ class Soccerplayer{
        
     }
     int GetTestimonial(){
+        cout<<"Testimonial: ";
         cin>>testimonial;
+        cout<<endl;
        return testimonial;
     }
     Soccerplayer(){};
@@ -52,7 +53,9 @@ class Soccerplayer{
         
     }
     void print(){
-    cout<<this -> name<<" "<<this -> old <<"years old  "<<this -> testimonial<<"million dollars";
+    cout<<"Name: "<<this -> name<<endl;
+    cout<<"Old: "<<this -> old <<"years old  "<<endl;
+    cout<<"Testimonial: "<<this -> testimonial<<"million dollars";
     }
 };
 int main()
